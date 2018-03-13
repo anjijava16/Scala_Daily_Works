@@ -4,7 +4,8 @@ Introduction to Scala Version # 2.12.2
 
 # Learning Scala: Fundamentals
 
-URL : https://drive.google.com/open?id=1B-bE1HBL5waJ8_-0DFJeXranM2SDU7z1
+
+
 val id=10
 val applicationName="dqa"
 val jobId=97889
@@ -140,3 +141,113 @@ BFS
 DFS:Deaf
 Graph
  
+
+   1
+ 2    3
+4 5  6  7
+  
+  
+# Learning Scla #Day 3 
+
+  Tuple   
+====================================== Learning Scala Fundementails ====================
+val dbDetails=("com.db2.Driver","jdbc:db2:@host:","hedisdb","chhhhdfh");
+
+scala> val dbDetails=("com.db2.Driver","jdbc:db2:@host:","hedisdb","chhhhdfh");
+dbDetails: (String, String, String, String) = (com.db2.Driver,jdbc:db2:@host:,hedisdb,chhhhdfh)
+
+scala> dbDetails._1
+res6: String = com.db2.Driver
+
+scala> dbDetails._2
+res7: String = jdbc:db2:@host:
+
+scala> dbDetails._3
+res8: String = hedisdb
+
+scala> dbDetails._4
+res9: String = chhhhdfh
+
+scala> val passwod=dbDetails._4
+passwod: String = chhhhdfh
+
+Arrays : 0
+Tuple : 1
+
+val x=Tuple1("akdkf","adkfadk")
+val glazedDonut = Tuple3("Glazed Donut", "Very Tasty", 2.50)
+val strawberryDonut = Tuple3("Strawberry Donut", "Very Tasty", 2.50)
+val plainDonut = Tuple3("Plain Donut", "Tasty", 2)
+
+val donutList = List(glazedDonut, strawberryDonut, plainDonut)
+
+val priceOfPlainDonut = donutList.foreach { tuple => {
+  tuple match {
+    case ("Plain Donut", taste, price) => println(s"Donut type = Plain Donut, price = $price")
+    case d if d._1 == "Glazed Donut" => println(s"Donut type = ${d._1}, price = ${d._3}")
+    case _ => None
+    }
+  }
+}
+  
+  
+  val priceOfPlainDonut = donutList.foreach { tuple => {
+  tuple match {
+   case d =>println(d)
+  }
+  }
+  
+  val priceOfDonut: Any = 2.50
+val priceType = priceOfDonut match {
+  case price: Int => "Int"
+  case price: Double => "Double"
+  case price: Float => "Float"
+  case price: String => "String"
+  case price: Boolean => "Boolean"
+  case price: Char => "Char"
+  case price: Long => "Long"
+}
+  
+  
+  
+  val x=(1,"hello")
+
+  x.productIterator
+  .foreach {
+       println   
+   }  
+  
+  x.productIterator
+  .foreach {
+    case s: String => println("string: " + s)
+    case i: Int => println("int: " + i)
+  }
+  
+  Tuple Methods 
+  scala> myTuple.
+_1   canEqual   hashCode       productElement(Element Wise Like Position checking)    toString
+_2   copy       invert         productIterator   zipped
+_3   equals     productArity   productPrefix(Perfix of what is tuple )
+
+scala> myTuple.
+
+
+                Any 
+	AnyValue           AnyRef	
+	 Int,Float,Double    List,Set,Seq,
+	 
+	 val x:Any=10
+	 val y:AnyValue=20.5
+	 val p:AnyRef=List("anji","adfadf")
+	 
+		
+       Option
+Some          None 
+
+		
+# ################################################################################################
+
+# Scala Classes & Objects (OOPS) 
+ 1::class
+ 2::Object
+
